@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BloomBugNew.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>DBE0315C22B22E3F8A9B9CBE90E24E1721E0F829</string>
+				<key>dateExpires</key>
+				<string>08/03/23</string>
+				<key>type</key>
+				<string>Apple Development</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>3HHGJTCB3D.org.reactjs.native.example.BloomBugNew</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>3HHGJTCB3D</string>
+				<key>get-task-allow</key>
+				<true/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>3HHGJTCB3D.org.reactjs.native.example.BloomBugNew</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>BloomBugNew.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>8e839366-5e77-42b9-aef5-987c050b217f</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: *</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>3HHGJTCB3D</string>
+				<key>name</key>
+				<string>Brijesh Patel</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

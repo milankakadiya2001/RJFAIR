@@ -1,0 +1,54 @@
+{
+  "name": "BloomBugNew",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.17.3",
+    "@react-native-community/cameraroll": "^4.1.2",
+    "@react-native-community/clipboard": "^1.5.1",
+    "@react-navigation/bottom-tabs": "^6.2.0",
+    "@react-navigation/material-top-tabs": "^6.2.1",
+    "@react-navigation/native": "^6.0.8",
+    "@react-navigation/native-stack": "^6.6.1",
+    "@twotalltotems/react-native-otp-input": "^1.3.11",
+    "fbjs": "^3.0.4",
+    "lottie-react-native": "^5.0.1",
+    "react": "17.0.2",
+    "axios": "^0.27.1",
+    "react-native": "0.67.3",
+    "react-native-camera": "^4.2.1",
+    "react-native-image-picker": "^4.7.3",
+    "react-native-masked-text": "^1.13.0",
+    "react-native-pager-view": "^5.4.15",
+    "react-native-paper": "^4.12.0",
+    "react-native-safe-area-context": "^3.4.1",
+    "react-native-screens": "^3.12.0",
+    "react-native-permissions": "^3.3.1",
+    "react-native-qrcode-scanner": "^1.5.5",
+    "react-native-segmented-control-tab": "^4.0.0",
+    "react-native-slider": "^0.11.0",
+    "react-native-swipe-list-view": "^3.2.9",
+    "react-native-tab-view": "^3.1.1",
+    "reanimated": "^0.0.1-alpha"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/runtime": "^7.17.2",
+    "@react-native-community/eslint-config": "^3.0.1",
+    "babel-jest": "^27.5.1",
+    "eslint": "^8.10.0",
+    "jest": "^27.5.1",
+    "metro-react-native-babel-preset": "^0.69.0",
+    "react-test-renderer": "17.0.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
