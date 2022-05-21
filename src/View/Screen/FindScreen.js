@@ -77,7 +77,7 @@ const FindScreen = ({navigation}) => {
       setLoading(false);
       try {
         const studentData = await axios.post(
-          `http://15.206.203.93:3001/api/university/scan`,
+          `http://13.233.42.166:3001/api/university/scan`,
           value,
           {
             headers: {
@@ -115,12 +115,11 @@ const FindScreen = ({navigation}) => {
       <ScrollView>
         <TouchableNativeFeedback onPress={Keyboard.dismiss}>
           <View>
-            <FindCard source={icons.student} title="100+ " desc="Students" />
-
+            
             <FindCard
               source={icons.write}
               title="Write Code"
-              desc="Get a best course in top university"
+           
               onPress={handleClick}
             />
             <Modal visible={modalVisible}>
@@ -143,7 +142,7 @@ const FindScreen = ({navigation}) => {
             <FindCard
               source={icons.scanner}
               title="Scan Code"
-              desc="Get a best course in top university"
+              
               onPress={() => navigation.navigate('Scanner')}
             />
           </View>

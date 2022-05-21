@@ -10,7 +10,7 @@ const FindCard = ({source, title, desc, onPress}) => {
       </View>
       <View style={styles.container} >
           <Text style={styles.header} >{title}</Text>
-          <Text style={styles.description} >{desc}</Text>
+          {/* <Text style={styles.description} >{desc}</Text> */}
       </View>
     </TouchableOpacity>
   )

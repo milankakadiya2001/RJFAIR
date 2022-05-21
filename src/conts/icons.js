@@ -13,6 +13,7 @@ const write = require('../assets/icons/write.png');
 const findcode = require('../assets/icons/findcode.png');
 const student = require('../assets/icons/student.png');
 const university = require('../assets/icons/university1.png');
+const logo = require('../assets/icons/rgLogo.png');
 
 export default {
   user,
@@ -29,5 +30,6 @@ export default {
   write,
   findcode,
   student,
-  university
+  university,
+  logo
 };

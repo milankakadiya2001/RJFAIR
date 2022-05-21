@@ -1,16 +1,16 @@
 import {StyleSheet, Text, useWindowDimensions, View} from 'react-native';
 import React from 'react';
 import COLORS from '../../conts/colors';
-import { ActivityIndicator } from 'react-native-paper';
+import {ActivityIndicator} from 'react-native-paper';
 
 const Loader = ({visible = false}) => {
-    const {width, height} = useWindowDimensions();
+  const {width, height} = useWindowDimensions();
   return (
     visible && (
-      <View style={[styles.container, {height, width}]} >
-        <View style={styles.loader} >
-            <ActivityIndicator size="large" color={COLORS.blue}/>
-            <Text style={{marginLeft: 10, fontSize: 16}} >Loading...</Text>
+      <View style={[styles.container, {height, width}]}>
+        <View style={styles.loader}>
+          <ActivityIndicator size="large" color={COLORS.darkBlue} />
+          <Text style={{marginLeft: 10, fontSize: 16}}>Loading...</Text>
         </View>
       </View>
     )
@@ -20,19 +20,19 @@ const Loader = ({visible = false}) => {
 export default Loader;
 
 const styles = StyleSheet.create({
-    container: {
-        position: 'absolute',
-        zIndex: 10,
-        backgroundColor: 'rgba(0,0,0,0.5)',
-        justifyContent: 'center'
-    },
-    loader: {
-        height: 70,
-        backgroundColor: COLORS.white,
-        marginHorizontal: 50,
-        borderRadius: 5,
-        flexDirection: 'row',
-        alignItems: 'center',
-        paddingHorizontal: 20
-    }
+  container: {
+    position: 'absolute',
+    zIndex: 10,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    justifyContent: 'center',
+  },
+  loader: {
+    height: 70,
+    backgroundColor: COLORS.white,
+    marginHorizontal: 50,
+    borderRadius: 5,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+  },
 });

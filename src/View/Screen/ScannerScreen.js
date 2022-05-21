@@ -47,7 +47,7 @@ const ScannerScreen = ({navigation}) => {
       setLoading(false);
       try {
         const studentData = await axios.post(
-          `http://15.206.203.93:3001/api/university/scan`,
+          `http://13.233.42.166:3001/api/university/scan`,
           {student_id: value},
           {
             headers: {
@@ -72,7 +72,7 @@ const ScannerScreen = ({navigation}) => {
             //   onPress: () => navigation.navigate('Tabs'),
             // },
             {text: 'scan again', onPress: () => navigation.navigate('Tabs')},
-         ]);
+          ]);
         }
         console.log(studentData.data);
       } catch (error) {

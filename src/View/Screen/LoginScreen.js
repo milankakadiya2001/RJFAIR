@@ -7,6 +7,7 @@ import {
   Text,
   KeyboardAvoidingView,
   View,
+  Image,
 } from 'react-native';
 import React from 'react';
 import COLORS from '../../conts/colors';
@@ -49,7 +50,7 @@ const LoginScreen = ({navigation}) => {
       setLoading(false);
       try {
         const loginData = await axios.post(
-          `http://15.206.203.93:3001/api/university/login`,
+          `http://13.233.42.166:3001/api/university/login`,
           value,
         );
         if (loginData.data.status == 200) {
@@ -103,6 +104,9 @@ const LoginScreen = ({navigation}) => {
             backgroundColor: '#fff',
             // height: '100%',
           }}>
+            <View style={{justifyContent: 'center', alignItems: 'center'}} >
+              <Image source={icons.logo} style={styles.logo} />
+            </View>
           <Text style={styles.title}>Login</Text>
           <Text style={styles.description}>Enter Your Details to Login</Text>
           <View style={{marginVertical: 20}}>
@@ -145,4 +149,8 @@ const styles = StyleSheet.create({
     color: COLORS.grey,
     marginVertical: 10,
   },
+  logo: {
+    height: 100,
+    width: 100,
+  }
 });
