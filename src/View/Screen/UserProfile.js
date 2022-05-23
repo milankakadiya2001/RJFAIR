@@ -10,8 +10,9 @@ import {
 import React from 'react';
 import {COLORS, icons} from '../../conts';
 import Buttons from '../Components/Buttons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const UserProfile = navigation => {
+const UserProfile = ({navigation}) => {
   const handleLogOut = () =>
     Alert.alert('Log out', 'Are you sure?', [
       {
@@ -19,7 +20,12 @@ const UserProfile = navigation => {
         onPress: () => console.log('Cancel Pressed'),
         style: 'cancel',
       },
-      {text: 'log out', onPress: () => navigation.navigate('Login')},
+      {
+        text: 'log out',
+        onPress: () => {
+          AsyncStorage.clear();
+        navigation.replace('Login')
+      }},
     ]);
   return (
     <SafeAreaView
@@ -38,7 +44,7 @@ const UserProfile = navigation => {
           <Image source={icons.user} />
         </View>
         <View style={{width: 250}}>
-          <Buttons title="Log out" onPres={handleLogOut} />
+          <Buttons title="Log out" onPress={handleLogOut} />
         </View>
       </View>
     </SafeAreaView>

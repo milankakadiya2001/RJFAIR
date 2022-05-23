@@ -61,8 +61,9 @@ const FindScreen = ({navigation}) => {
     let isValid = true;
 
     if (!inputs.student_id) {
-      handleError('Please input student id', 'student');
-      isValid = false;
+      Alert.alert('Please input student id', '');
+      // isValid = false;
+      return;
     }
 
     if (isValid) {
@@ -88,10 +89,23 @@ const FindScreen = ({navigation}) => {
 
         if (studentData.data.status == 200) {
           Alert.alert('Student add successfully');
+          // Alert.alert(
+          //   'Student add successfully',
+          //   [{text: 'OK', onPress: () => reverse()}],
+          //   {cancelable: false},
+          // );
+          // studentData = ""
+          console.log(studentData, '11');
         } else if (studentData.data.status == 400) {
-          Alert.alert('Student already exist!');
+          Alert.alert('Student already exist!', '', [
+            {
+              text: 'Ok',
+              onPress: () => {},
+            },
+          ]);
         }
-        console.log(studentData.data);
+        reverse();
+
         // console.log(studentData, 'hhhhhhhh');
         console.log(token['_W'], 'asddsadasdsadsadsadsa');
       } catch (error) {
@@ -107,7 +121,13 @@ const FindScreen = ({navigation}) => {
   const handleError = (error, input) => {
     setErrors(prevState => ({...prevState, [input]: error}));
   };
-  console.log(inputs);
+
+  const reverse = () => {
+    // setStudent_id('');
+    setInputs({
+      student_id: '',
+    });
+  };
 
   return (
     <SafeAreaView style={styles.root}>
@@ -115,20 +135,19 @@ const FindScreen = ({navigation}) => {
       <ScrollView>
         <TouchableNativeFeedback onPress={Keyboard.dismiss}>
           <View>
-            
             <FindCard
               source={icons.write}
               title="Write Code"
-           
               onPress={handleClick}
             />
             <Modal visible={modalVisible}>
               <Animated.View
                 style={[styles.inputContainer, {opacity: fadeAnim}]}>
                 <Input
-                  onChangeText={text => handleOnchange(text, 'student_id')}
-                  onFocus={() => handleError(null, 'student')}
                   // label="Email"
+                  onChangeText={text => handleOnchange(text, 'student_id')}
+                  onFocus={() => handleError(null, 'student_id')}
+                  value={inputs.student_id}
                   keyboardType="numeric"
                   placeholder="Enter your code"
                   autoCapitalize="none"
@@ -142,7 +161,6 @@ const FindScreen = ({navigation}) => {
             <FindCard
               source={icons.scanner}
               title="Scan Code"
-              
               onPress={() => navigation.navigate('Scanner')}
             />
           </View>
